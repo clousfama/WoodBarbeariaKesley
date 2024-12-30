@@ -9,6 +9,39 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+  <style>
+        @media (max-width: 768px) {
+            #sidebar {
+                transform: translateX(100%);
+                width: 100%;
+                z-index: 50;
+            }
+            
+            #sidebar.show {
+                transform: translateX(0);
+            }
+
+            .menu-button {
+                display: block;
+            }
+
+            main {
+                margin-right: 0 !important;
+            }
+        }
+    </style>
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        woodDark: '#1a1a1a',
+                        woodGold: '#d4af37',
+                    }
+                }
+            }
+        }
+    </script>
 </head>
 <body class="bg-woodDark text-white">
     <!-- Menu Button for mobile -->
