@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <base href="/" />
+    <title>Wood Barbearia</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="css/styles.css" rel="stylesheet" />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/flowbite/2.2.0/flowbite.min.css" rel="stylesheet" />
+</head>
+<body class="bg-woodDark text-white">
+    <!-- Menu Button for mobile -->
+    <button class="fixed top-4 right-4 z-50 p-2 bg-woodGold text-black rounded menu-button hidden md:hidden" onclick="toggleMenu()">
+        <svg xmlns="http://www.w3.org/2000/svg" class="h-6 w-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16m-7 6h7" />
+        </svg>
+    </button>
+
+    <!-- Menu Lateral -->
+    <div class="fixed top-0 right-0 h-screen w-64 bg-black bg-opacity-90 p-5 transform transition-transform duration-300 ease-in-out" id="sidebar">
+        <div class="flex flex-col h-full">
+            <nav class="space-y-8 text-woodGold">
+                <a href="javascript:document.getElementById('home').scrollIntoView({behavior: 'smooth'})" class="block hover:text-white transition">Início</a>
+                <a href="javascript:document.getElementById('services').scrollIntoView({behavior: 'smooth'})" class="block hover:text-white transition">Serviços</a>
+                <a href="javascript:document.getElementById('gallery').scrollIntoView({behavior: 'smooth'})" class="block hover:text-white transition">Galeria</a>
+                <a href="javascript:document.getElementById('schedule').scrollIntoView({behavior: 'smooth'})" class="block hover:text-white transition">Agendamento</a>
+                <a href="javascript:document.getElementById('contact').scrollIntoView({behavior: 'smooth'})" class="block hover:text-white transition">Contato</a>
+            </nav>
+        </div>
+    </div>
+
+    <!-- Conteúdo Principal -->
+    <main class="ml-0 md:mr-64">
+        <!-- Seção Inicial -->
+        <section id="home" class="h-screen flex items-center justify-center bg-woodDark">
+            <div class="text-center">
+                <img src="images/Wood BARBEARIA LOGOMARCA_page-0001.jpg" alt="Wood Barbearia Logo" class="mx-auto w-64 mb-8">
+                <h1 class="text-4xl font-bold text-woodGold mb-4">Wood Barbearia</h1>
+                <p class="text-xl">Estilo e Tradição em cada corte</p>
+            </div>
+        </section>
+
+        <!-- Serviços -->
+        <section id="services" class="py-16 px-8 bg-black bg-opacity-80">
+            <h2 class="text-3xl font-bold text-center text-woodGold mb-8">Nossos Serviços</h2>
+            <div class="max-w-4xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="text-center p-6 border border-woodGold rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Corte</h3>
+                    <p class="text-woodGold text-2xl">R$ 35,00</p>
+                </div>
+                <div class="text-center p-6 border border-woodGold rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Barba</h3>
+                    <p class="text-woodGold text-2xl">R$ 25,00</p>
+                </div>
+                <div class="text-center p-6 border border-woodGold rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Pezinho</h3>
+                    <p class="text-woodGold text-2xl">R$ 10,00</p>
+                </div>
+                <div class="text-center p-6 border border-woodGold rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Sombrancelha</h3>
+                    <p class="text-woodGold text-2xl">R$ 10,00</p>
+                </div>
+                <div class="text-center p-6 border border-woodGold rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Corte + Barba</h3>
+                    <p class="text-woodGold text-2xl">R$ 55,00</p>
+                </div>
+                <div class="text-center p-6 border border-woodGold rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Corte + Hidratação</h3>
+                    <p class="text-woodGold text-2xl">R$ 75,00</p>
+                </div>
+                <div class="text-center p-6 border border-woodGold rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Pintura</h3>
+                    <p class="text-woodGold text-2xl">R$ 35,00</p>
+                </div>
+                <div class="text-center p-6 border border-woodGold rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Progressiva</h3>
+                    <p class="text-woodGold text-2xl">A partir de R$ 70,00</p>
+                </div>
+                <div class="text-center p-6 border border-woodGold rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Platinado</h3>
+                    <p class="text-woodGold text-2xl">A partir de R$ 160,00</p>
+                </div>
+                <div class="text-center p-6 border border-woodGold rounded-lg">
+                    <h3 class="text-xl font-bold mb-2">Luzes</h3>
+                    <p class="text-woodGold text-2xl">R$ 70,00</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Galeria -->
+        <section id="gallery" class="py-16 px-8 bg-woodDark">
+            <h2 class="text-3xl font-bold text-center text-woodGold mb-8">Nossa Galeria</h2>
+            <div class="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 px-4">
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="images/IMG-20241126-WA0035.jpg" alt="Interior da Barbearia" class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="images/IMG-20241126-WA0036.jpg" alt="Cadeira de Barbeiro" class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                </div>
+                <div class="overflow-hidden rounded-lg shadow-lg">
+                    <img src="images/IMG-20241126-WA0037.jpg" alt="Fachada da Barbearia" class="w-full h-64 object-cover hover:scale-105 transition duration-300">
+                </div>
+            </div>
+        </section>
+
+        <!-- Formulário de Agendamento -->
+        <section id="schedule" class="py-16 px-8 bg-black bg-opacity-80">
+            <h2 class="text-3xl font-bold text-center text-woodGold mb-8">Agendamento</h2>
+            <form id="appointmentForm" class="max-w-lg mx-auto space-y-6 px-4">
+                <div>
+                    <label class="block mb-2">Nome Completo</label>
+                    <input type="text" required class="w-full p-2 bg-gray-800 rounded">
+                </div>
+                <div>
+                    <label class="block mb-2">WhatsApp</label>
+                    <input type="tel" required class="w-full p-2 bg-gray-800 rounded">
+                </div>
+                <div>
+                    <label class="block mb-2">Serviço</label>
+                    <select required class="w-full p-2 bg-gray-800 rounded">
+                        <option value="">Selecione um serviço</option>
+                        <option value="corte">Corte - R$ 35,00</option>
+                        <option value="barba">Barba - R$ 25,00</option>
+                        <option value="pezinho">Pezinho - R$ 10,00</option>
+                        <option value="sobrancelha">Sobrancelha - R$ 10,00</option>
+                        <option value="corte_barba">Corte + Barba - R$ 55,00</option>
+                        <option value="corte_hidratacao">Corte + Hidratação - R$ 75,00</option>
+                        <option value="pintura">Pintura - R$ 35,00</option>
+                        <option value="progressiva">Progressiva - A partir de R$ 70,00</option>
+                        <option value="platinado">Platinado - A partir de R$ 160,00</option>
+                        <option value="luzes">Luzes - R$ 70,00</option>
+                    </select>
+                </div>
+                <div>
+                    <label class="block mb-2">Data</label>
+                    <input type="date" required class="w-full p-2 bg-gray-800 rounded" id="appointmentDate">
+                </div>
+                <div>
+                    <label class="block mb-2">Horário</label>
+                    <select required class="w-full p-2 bg-gray-800 rounded" id="timeSlots">
+                        <option value="">Selecione um horário</option>
+                    </select>
+                </div>
+                <button type="submit" class="w-full bg-woodGold text-black py-2 rounded hover:bg-yellow-600 transition">
+                    Agendar
+                </button>
+            </form>
+        </section>
+
+        <!-- Contato -->
+        <section id="contact" class="py-16 px-8">
+            <h2 class="text-3xl font-bold text-center text-woodGold mb-8">Contato</h2>
+            <div class="max-w-2xl mx-auto">
+                <div class="space-y-4 text-center">
+                    <p>Rua Pinto Alves, 596 - Vila Santa Cecília</p>
+                    <p>Lagoa Santa/MG - CEP: 33230-222</p>
+                    <p>Telefone: (31) 99298-4248</p>
+                    <div class="mt-8">
+                        <h3 class="text-xl font-bold mb-4">Horário de Funcionamento</h3>
+                        <p>Segunda a Sexta: 08:00 - 19:00</p>
+                        <p>Sábado: 08:30 - 17:00</p>
+                        <p>Domingo: Fechado</p>
+                    </div>
+                </div>
+            </div>
+            <div class="mt-8 text-center">
+                <button onclick="viewAppointments()" class="bg-woodGold text-black px-6 py-2 rounded hover:bg-yellow-600 transition">
+                    Ver Agenda de Appointments
+                </button>
+            </div>
+        </section>
+    </main>
+
+    <script src="js/script.js"></script>
+</body>
+</html>

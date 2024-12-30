@@ -1,0 +1,30 @@
+@media (max-width: 768px) {
+    #sidebar {
+        transform: translateX(100%);
+        width: 100%;
+        z-index: 50;
+    }
+    
+    #sidebar.show {
+        transform: translateX(0);
+    }
+
+    .menu-button {
+        display: block;
+    }
+
+    main {
+        margin-right: 0 !important;
+    }
+}
+
+tailwind.config = {
+    theme: {
+        extend: {
+            colors: {
+                woodDark: '#1a1a1a',
+                woodGold: '#d4af37',
+            }
+        }
+    }
+}
